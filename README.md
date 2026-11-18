@@ -8,10 +8,10 @@ server, Node, Bun, private core source or database is needed to build/test it.
 ## Build and install
 
 Java 25, Maven 3.9+, Spring Boot 4.0.9, exact SDK API **0.5** and SDK
-artifacts `0.5.0-SNAPSHOT` are required. The API 0.5 source update is pending the
-merged SDK source pin. `sdk-revision.txt` still selects the prior API 0.3 commit
-`ad5dc81e0378d31a8cb4e80a531dee559adea648`; use `GIVOPS_SDK_SOURCE` with the
-reviewed API 0.5 source for coordinated verification until the pin is updated.
+artifacts `0.5.0-SNAPSHOT` are required. `sdk-revision.txt` pins merged public
+SDK API 0.5 commit `8226eab4967b8482327ad3cbc4b20c4e92a33ed1`.
+The bootstrap builds that exact public source. This source pin does not imply a
+tagged SDK release; the adapter artifact remains `0.1.0-SNAPSHOT`.
 Hosts with earlier SDK API levels are incompatible.
 
 ```sh
