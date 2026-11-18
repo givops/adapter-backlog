@@ -31,7 +31,7 @@ class BacklogRegistrationTest {
         try (var stream = getClass().getResourceAsStream("/META-INF/givops-adapter.properties")) { properties.load(stream); }
         var definition = new BacklogDefinition();
         assertThat(properties.getProperty("provider")).isEqualTo(definition.providerId());
-        assertThat(properties.getProperty("sdkApiVersion")).isEqualTo(definition.sdkApiVersion()).isEqualTo("0.3");
+        assertThat(properties.getProperty("sdkApiVersion")).isEqualTo(definition.sdkApiVersion()).isEqualTo("0.5");
         assertThat(properties.getProperty("adapterId")).isEqualTo(definition.adapterId());
         assertThat(properties.getProperty("adapterVersion")).isEqualTo(definition.adapterVersion());
         try (var stream = getClass().getResourceAsStream("/META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports")) {

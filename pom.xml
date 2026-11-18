@@ -5,7 +5,7 @@
   <name>GivOps Backlog.md adapter</name>
   <description>Independent read-only Backlog.md adapter for GivOps</description>
   <licenses><license><name>Apache License, Version 2.0</name><url>https://www.apache.org/licenses/LICENSE-2.0.txt</url></license></licenses>
-  <properties><java.version>25</java.version><givops.sdk.version>0.3.0-SNAPSHOT</givops.sdk.version></properties>
+  <properties><java.version>25</java.version><givops.sdk.version>0.5.0-SNAPSHOT</givops.sdk.version></properties>
   <dependencies>
     <dependency><groupId>io.givops</groupId><artifactId>adapter-spring-boot</artifactId><version>${givops.sdk.version}</version></dependency>
     <dependency><groupId>org.yaml</groupId><artifactId>snakeyaml</artifactId></dependency>

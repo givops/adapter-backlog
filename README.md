@@ -7,12 +7,12 @@ server, Node, Bun, private core source or database is needed to build/test it.
 
 ## Build and install
 
-Java 25, Maven 3.9+, Spring Boot 4.0.9, SDK API **0.3**. `sdk-revision.txt`
-pins reviewed public SDK commit
-[`ad5dc81e0378d31a8cb4e80a531dee559adea648`](https://github.com/givops/adapter-sdk/commit/ad5dc81e0378d31a8cb4e80a531dee559adea648).
-This is a published source commit on `task/ticket-browser`, not a release tag or
-claim that SDK main has merged it. The bootstrap builds that exact source; SDK 0.2
-hosts are incompatible.
+Java 25, Maven 3.9+, Spring Boot 4.0.9, exact SDK API **0.5** and SDK
+artifacts `0.5.0-SNAPSHOT` are required. The API 0.5 source update is pending the
+merged SDK source pin. `sdk-revision.txt` still selects the prior API 0.3 commit
+`ad5dc81e0378d31a8cb4e80a531dee559adea648`; use `GIVOPS_SDK_SOURCE` with the
+reviewed API 0.5 source for coordinated verification until the pin is updated.
+Hosts with earlier SDK API levels are incompatible.
 
 ```sh
 scripts/build.sh
@@ -35,8 +35,8 @@ Install the plain library JAR into the compatible host adapter directory, normal
 (SnakeYAML and commonmark); never bundle a second SDK or Spring version. Inspect
 `mvn dependency:tree` against the actual host distribution before installing.
 A read-only bind mount replaces the entire directory; retain other installed
-providers. SDK 0.2 hosts must reject this artifact. Core/frontend upgrades belong
-to task 67; compatible subsequent Backlog fixes can replace this JAR independently.
+providers. Hosts must match SDK API 0.5 exactly; earlier API levels must reject
+this artifact. Compatible Backlog fixes can replace this JAR independently.
 There is no hosted Backlog service to configure and no fallback embedded provider.
 
 ## Source configuration
